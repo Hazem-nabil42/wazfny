@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .btn {
+      @apply rounded-xl transition duration-300 hover:animate-bounce
+      grayscale hover:grayscale-0 hover:brightness-150 animate-[scale_3s_ease-in-out_infinite];
+    }
+    .card{
+      @apply w-[300px] h-[400px] bg-transparent rounded-2xl flex flex-col justify-between items-center
+      p-5  shadow-lg shadow-black ;
+    }
+  }
