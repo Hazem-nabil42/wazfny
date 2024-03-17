@@ -4,31 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page</title>
+    <title> قدم للتوظيف </title>
     <link rel="stylesheet" href="./public/styles.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 </head>
 <body>
     <header class="mb-5">
         <div class="w-full min-h-[10vh] py-5 px-24 bg-black text-yellow-500 text-lg md:text-xl flex flex-col 
-            md:flex-row justify-between items-center shadow-xl shadow-yellow-800">
+            md:flex-row justify-between items-center">
             <!-- logo -->
             <div>
                 <h1 class="font-gadm text-4xl tracking-[5px]">
-                    قدم
+                    <a href="/">    قدم   </a>
                 </h1>
             </div>
             <!-- nav -->
             <div>
                 <nav>
-                    <ul class="flex gap-x-10 ">
+                    <ul class="flex gap-x-10 font-bold">
                         <li class="transition duration-300 hover:text-blue-600">
-                            <a href="">Project</a>
+                            <a href="">المدونة</a>
                         </li>
                         <li class="transition duration-300 hover:text-blue-600">
-                            <a href="">Services</a>
+                            <a href="">الخدمات</a>
                         </li>
                         <li class="transition duration-300 hover:text-blue-600">
-                            <a href="">Contact</a>
+                            <a href="">تواصل معنا</a>
                         </li>
                     </ul>
                 </nav>
@@ -38,23 +41,57 @@
 
     <main>
         <section class=" w-full min-h-[400px] bg-transparent bg-hero bg-no-repeat bg-center bg-scroll 
-            bg-cover drop-shadow-lg text-white text-2xl md:text-4xl text-center md:text-right 
-            py-10 px-10 md:px-40">
-            <!-- title -->
-            <div class="flex flex-col gap-5">
-                <span class="text-xl">مرحبا بكم في شركة الشيف</span>
-                <h1 class="text-4xl">الشيف</h1>
-                <p class="text-sm md:text-xl">استقطاب الكوادر المتخصصة في مجال الطبخ من جميع انحاء العالم</p>
+            bg-cover drop-shadow-lg text-white text-2xl md:text-4xl text-center md:text-right overflow-hidden
+            py-32 px-10 md:px-40 flex flex-col justify-between" 
+            style="background-image: url('./public/images/banner.png');">
+            <!-- swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper text-center text-slate-700 font-semibold">
+                    <!-- slide 1 -->
+                    <div class="swiper-slide">
+                        <span> مرحبا بكم في شركة قدم للتوظيف </span>
+                        <!-- <p class="text- "> قدم </p> -->
+                    </div>
+                    <!-- slide 2 -->
+                    <div class="swiper-slide">
+                        <p class="text-balance mb-10"> قدم المنصة الاولي للتوظيف في المملكة العربية السعودية ابدأ مسيرتك المهنية من هنا و احصل علي وظيفة احلامك </p>
+                        <button class=" click-me "> ابحث عن وظيفتك </button>
+                    </div>
+                    <!-- slide 3 -->
+                    <div class="swiper-slide p-10">  
+                        <span> تبحث عن وظيفة مناسبة؟ </span>
+                        <p class="text-balance mb-10"> قدم سبيلك الي الحصول عليها كل ما عليك هو تحديد المجال و اختيار الشركة و ارفاق سيرتك الذاتية و سيصلك الرد في اقرب وقت</p>
+                        <button class="click-me"> ارفق سيرتك الان </button>
+                    </div>
+                    <!-- slide 4 -->
+                    <div class="swiper-slide">  
+                        <span> تبحث عن وظيفة مناسبة؟ </span>
+                        <p class="text-balance mb-10"> قدم سبيلك الي الحصول عليها كل ما عليك هو تحديد المجال و اختيار الشركة و ارفاق سيرتك الذاتية و سيصلك الرد في اقرب وقت</p>
+                        <button class="click-me"> ابدأ من اللحظة </button>
+                    </div>
+                </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
             </div>
-            <!-- button -->
-            <div class="my-10 p-2 ">
-                <button class="border rounded-xl border-blue-700 p-2 transition duration-500 bg-blue-800 shadow-2xl
-                 shadow-blue-700 hover:bg-red-600 hover:shadow-red-700 hover:border-red-700">
-                    View my work
-                </button>
-            </div>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 3000, // Delay between transitions in milliseconds (3 seconds in this case)
+                    disableOnInteraction: false, // Autoplay will not be disabled after user interactions (like swiping)
+                },
+                });
+            });
+            </script>
             <!-- social media -->
-            <div class="flex justify-center gap-7">
+            <div class="flex justify-center gap-7 ">
                 <!-- twitter -->
                 <button class="btn">
                     <img  width="40" height="40" src="./public/images/Twitter.png" alt="Twitter">
@@ -80,25 +117,29 @@
 
         <!-- services -->
         <section class="text-center my-10">
-            <div>
+            <div class="flex flex-col justify-between py-20 px-10 gap-10">
+                <div class="text-4xl font-bold">
+                    <span> كلمة الرئيس التنفيذي </span>
+                </div>
+                <div class="px-10">
+                    <p class="text-balance text-center font-semibold text-md"> 
+                        جاءت فكرة منصة قدّم من خلال النظر إلى حاجة السوق إلى ميزة إضافية تخدم قطاع التوظيف؛ فأردنا أن نقدم نموذجًا مختلفًا وغير تقليدي يخدم كل الأطراف المشاركة في عملية التوظيف. وقد وضعنا نُصب أعيننا توفير تجربة مستخدم مثالية من خلال معالجة كل العقبات التي تواجه الباحثين عن وظيفة في السوق السعودي ونراعي دومًا عملية التطوير؛ نظرًا لتغير السوق ومتطلباته بوتيرة سريعة وخاصة في ظل تطور أدوات الذكاء الاصطناعي. لذلك فإننا نوظف التقنية الحديثة التوظيف الأمثل؛ لنقدم الدعم الشامل للشركات من خلال تلبية حاجتها من الأفراد المؤهلين، وكذلك ندعم الأفراد من خلال مساعدتهم في الحصول على الوظيفة الأنسب لهم. وما زلنا نسعى إلى تطوير المنصة لتواكب كل جديد؛ وتكون الوجهة الأولى ليس فقط في السوق السعودي ولكن في المنطقة العربية والشرق الأوسط في القريب إن شاء الله. والله من وراء القصد.
+                    </p>
+                </div>
                 <!-- title -->
-                <div class="text-4xl">
-                    <h1>Services</h1>
+                <div class="text-4xl font-bold">
+                    <span> الخدمات </span>
                 </div>
-
-                <!-- cards -->
-                <div class="flex flex-col md:flex-row gap-10 justify-center items-center my-14">
-                    <div class="card">
-                        <img src="https://assets.entrepreneur.com/content/3x2/2000/1648113590-new4.jpg" alt="Writing">
-                        <span class="font-bold">Script Writing</span>
-                        <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti non aspernatur alias consequuntur doloremque, praesentium velit facere sequi ex aliquam repellat itaque excepturi, a blanditiis impedit expedita provident sed! Ut.</p>
-                    </div>
-                    <div class="card">
-                        <img src="https://assets.entrepreneur.com/content/3x2/2000/1648113590-new4.jpg" alt="SEO">
-                        <span class="font-bold">SEO search</span>
-                        <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti non aspernatur alias consequuntur doloremque, praesentium velit facere sequi ex aliquam repellat itaque excepturi, a blanditiis impedit expedita provident sed! Ut.</p>
-                    </div>
-                </div>
+                <p class="text-balance text-center font-semibold text-md">
+                    احصل على وظيفتك
+                    إذا كنت تبحث عن وظيفة تناسب مؤهلاتك وخبراتك العملية فإن قدم هي خيارك الأول!
+                    من خلال قاعدة بيانات عملاقة تضم الكثير من شركات ومؤسسات السوق السعودي في كل المجالات، ويُضاف إليها المزيد بشكل مستمر؛ يمكنك البحث الآن على الوظيفة التي تناسبك وإرفاق سيرتك الذاتية مباشرة ؛ لنرسلها إلى الشركات المحددة.
+                    نضمن لك الحفاظ على بياناتك ونلتزم بالشفافية الكاملة؛ إذ نرسل لك مباشرة عبر البريد الخاص بك تقريرا . مفصلًا يتضمن تأكيد إرسال السيرة الذاتية إلى الشركات التي حددتها بنفسك، ونتابع معك كل المستجدات حتى تحصل على الوظيفة التي تريد.
+                    كل ما عليك الآن هو تحديد مجال العمل والبحث بين الشركات وإرفاق سيرتك، ودع منصة قدّم تقدمك إلى سوق العمل.
+                    ارسل سيرتك فريقنا
+                    لأننا نسعى إلى الريادة أدركنا قيمة الفريق المميز؛ ونفتخر أن منصة قدّم تضم نخبة من المبدعين؛ الذين يتعاونون معًا لتقديم الدعم للمستخدم، وتطوير المنصة لتكون الخيار الأمثل لكل من يبحث عن وظيفة في المملكة العربية السعودية. وأهم ما يميز فريقنا
+                    فريق شامل في مختلف المجالات التي تضمن تطوير المنصة. فريق دعم محترف للرد على تساؤلات المستخدمين وحل مشكلاتهم. التعاون على تلبية حاجة المستخدم ومتابعة كل حالة بشكل شامل. التواصل المستمر وإرسال كل المستجدات بخصوص طلبات المستخدمين.
+                </p>
             </div>
         </section>
 
@@ -106,42 +147,50 @@
         <section class="text-center my-20">
             <div>
                 <!-- title -->
-                <div class="text-4xl">
-                    <span>Projects</span>
-                </div>
-
-                <!-- cards -->
-                <div class="flex flex-col md:flex-row gap-10 justify-center items-center my-14">
-                    <!-- cards_1 -->
-                    <div class="card">
-                        <div class="min-h-32">
-                            <img src="https://assets.entrepreneur.com/content/3x2/2000/1648113590-new4.jpg" alt="">
-                        </div>
-                        <span class="font-bold">Web page development</span>
-                        <div class="flex flex-col md:flex-row justify-between items-center gap-10">
-                            <span>DEVBOOKS</span>
-                            <a class="text-blue-600 pointer-events-auto">MORE DETAILS</a>
-                        </div>
-                    </div>
-                    <!-- cards_2 -->
-                    <div class="card">
-                        <div class="min-h-32">
-                            <img src="https://assets.entrepreneur.com/content/3x2/2000/1648113590-new4.jpg" alt="">
-                        </div>
-                        <span class="font-bold">Search engine optimization</span>
-                        <div class="flex flex-col md:flex-row justify-between items-center gap-10">
-                            <span>DEVBOOKS</span>
-                            <a href="#" class="text-blue-600 pointer-events-auto">MORE DETAILS</a>
-                        </div>
-                    </div>
+                <div class="text-4xl font-bold animate-pulse duration-300">
+                    <a href="#">المدونه</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="w-full h-20 bg-green-800 text-center py-8 text-white">
-        <div class="text-bold text-xl ">
-            <span>جميع الحقوق محفوظه لموقع <span class="text-black">وظفني</span> تصميم شركة افادة لتقنية المعلومات</span>
+    <div class="w-full h-fit relative -bottom-5 md:-bottom-10">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#166534" fill-opacity="1" d="M0,160L120,144C240,128,480,96,720,96C960,96,1200,128,1320,144L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+        </svg>
+    </div>
+    <footer class="w-full min-h-fit bg-green-800 text-center py-8 text-white ">
+        <div class="text-bold text-md md:text-xl flex flex-col gap-10
+            justify-between items-center px-10">
+            <div class="text-4xl font-bold text-yellow-500 animate-pulse">
+                <span> قدم </span>
+            </div>
+            <ul class="font-semibold text-xl">
+                <li class="hover:animate-scale duration-300 underline">
+                    <a href="/how"> كيف نعمل </a>
+                </li>
+                <li class="hover:animate-scale duration-300 underline">
+                    <a href="/about">عن شركة قدم</a>
+                </li>
+                <li class="hover:animate-scale duration-300 underline">
+                    <a href="/dudues"> شركاؤنا </a>
+                </li>
+                <li class="hover:animate-scale duration-300 underline">
+                    <a href="/contact">اتصل بنا</a>
+                </li>
+                <li class="hover:animate-scale duration-300 underline">
+                    <a href="/whyus"> لماذا نحن </a>
+                </li>
+                <li class="hover:animate-scale duration-300 underline">
+                    <a href="/politics">الشروط والاحكام</a>
+                </li>
+                <li class="hover:animate-scale duration-300 underline">
+                    <a href="/commonQ">الاسئلة الشائعه</a>
+                </li>
+            </ul>
+            <div class="text-xl font-bold">
+                <span> جميع الحقوق محفوظه لشركة قدم للتوظيف<span class="text-yellow-600"> وظفني</span></span>
+            </div>
         </div>
     </footer>
 
